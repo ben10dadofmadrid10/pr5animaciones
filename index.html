@@ -1,0 +1,48 @@
+<html>
+
+<head>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio 5 - Menú Desplegable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>📂 Ejercicio 5: Menú animado por altura</h2>
+
+    <div id="encabezado" class="encabezado">Menú ▾</div>
+
+    <ul id="menu" class="menu">
+      <li>Inicio</li>
+      <li>Servicios</li>
+      <li>Contacto</li>
+    </ul>
+
+    <footer>Menú interactivo | Ejercicio 5</footer>
+  </div>
+
+  <script>
+    let encabezado = document.getElementById("encabezado");
+    let menu = document.getElementById("menu");
+
+    function toggleMenu() {
+      menu.classList.toggle("abierto");
+
+      if (menu.classList.contains("abierto")) {
+        menu.style.height = menu.scrollHeight + "px";
+        console.log("Menú abierto ✅");
+      } else {
+        menu.style.height = "0px";
+        console.log("Menú cerrado ✅");
+      }
+    }
+
+    encabezado.onclick = toggleMenu;
+
+    console.log("Script listo → Ejercicio 5");
+  </script>
+
+</body>
+</html>
+
